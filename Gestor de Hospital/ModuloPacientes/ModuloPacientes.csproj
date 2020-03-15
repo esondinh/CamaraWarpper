@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF085832-D01A-415A-9B51-6D2DDF1B3DB5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ModuloPacientes</RootNamespace>
+    <AssemblyName>ModuloPacientes</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>6</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLS\CamaraWarpper.cs" />
+    <Compile Include="GUI\CamaraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CamaraForm.Designer.cs">
+      <DependentUpon>CamaraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CitasDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CitasDetalles.Designer.cs">
+      <DependentUpon>CitasDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ConsultasDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ConsultasDetalles.Designer.cs">
+      <DependentUpon>ConsultasDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\consultasEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\consultasEdicion.Designer.cs">
+      <DependentUpon>consultasEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DetallePacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DetallePacientes.Designer.cs">
+      <DependentUpon>DetallePacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DiagnosticosDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DiagnosticosDetalles.Designer.cs">
+      <DependentUpon>DiagnosticosDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionCitas.Designer.cs">
+      <DependentUpon>EdicionCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionDiagnosticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionDiagnosticos.Designer.cs">
+      <DependentUpon>EdicionDiagnosticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionIngresarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionIngresarPaciente.Designer.cs">
+      <DependentUpon>EdicionIngresarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionPaciente.Designer.cs">
+      <DependentUpon>EdicionPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionRecetaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionRecetaMedica.Designer.cs">
+      <DependentUpon>EdicionRecetaMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EnfermedadesDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EnfermedadesDetalles.Designer.cs">
+      <DependentUpon>EnfermedadesDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EnfermedadesDetallesEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EnfermedadesDetallesEdicion.Designer.cs">
+      <DependentUpon>EnfermedadesDetallesEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PacientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PacientesForm.Designer.cs">
+      <DependentUpon>PacientesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RecetasDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RecetasDetalles.Designer.cs">
+      <DependentUpon>RecetasDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Visores\VisorEnfermedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Visores\VisorEnfermedades.Designer.cs">
+      <DependentUpon>VisorEnfermedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Visores\VisorPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Visores\VisorPacientes.Designer.cs">
+      <DependentUpon>VisorPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Datos\enfermedades.cs">
+      <DependentUpon>enfermedades.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Datos\enfermedades.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>enfermedades.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Datos\Pacientes.cs">
+      <DependentUpon>Pacientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Datos\Pacientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pacientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Rep\Enfermedades.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enfermedades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\Rep\Pacientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pacientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\CamaraForm.resx">
+      <DependentUpon>CamaraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CitasDetalles.resx">
+      <DependentUpon>CitasDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ConsultasDetalles.resx">
+      <DependentUpon>ConsultasDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\consultasEdicion.resx">
+      <DependentUpon>consultasEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DetallePacientes.resx">
+      <DependentUpon>DetallePacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DiagnosticosDetalles.resx">
+      <DependentUpon>DiagnosticosDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionCitas.resx">
+      <DependentUpon>EdicionCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionDiagnosticos.resx">
+      <DependentUpon>EdicionDiagnosticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionIngresarPaciente.resx">
+      <DependentUpon>EdicionIngresarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionPaciente.resx">
+      <DependentUpon>EdicionPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionRecetaMedica.resx">
+      <DependentUpon>EdicionRecetaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EnfermedadesDetalles.resx">
+      <DependentUpon>EnfermedadesDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EnfermedadesDetallesEdicion.resx">
+      <DependentUpon>EnfermedadesDetallesEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PacientesForm.resx">
+      <DependentUpon>PacientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RecetasDetalles.resx">
+      <DependentUpon>RecetasDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Visores\VisorEnfermedades.resx">
+      <DependentUpon>VisorEnfermedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Visores\VisorPacientes.resx">
+      <DependentUpon>VisorPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Rep\Enfermedades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Enfermedades.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Rep\Pacientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Pacientes.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Reportes\Datos\enfermedades.xsc">
+      <DependentUpon>enfermedades.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Datos\enfermedades.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>enfermedades.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\Datos\enfermedades.xss">
+      <DependentUpon>enfermedades.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Datos\Pacientes.xsc">
+      <DependentUpon>Pacientes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Datos\Pacientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pacientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\Datos\Pacientes.xss">
+      <DependentUpon>Pacientes.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CacheManager\CacheManager.csproj">
+      <Project>{e010f1df-ed01-4b05-a19c-4d3c9377e9b4}</Project>
+      <Name>CacheManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRUDManager\CRUDManager.csproj">
+      <Project>{ad9f9521-d34a-41f6-b0bc-82299b588ccc}</Project>
+      <Name>CRUDManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SessionManager\SessionManager.csproj">
+      <Project>{d7a2fa1c-512d-48d8-bd65-e64501b942f4}</Project>
+      <Name>SessionManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

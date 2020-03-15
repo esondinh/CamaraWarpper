@@ -1,0 +1,1 @@
+C:\Users\ADM\Downloads\GestorHospital-0b7a6b9e1a0db2fb72f672e7940fbe185addb06b\Gestor de Hospital\CacheManager\obj\Debug\CacheManager.csprojAssemblyReference.cache
